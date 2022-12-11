@@ -18,6 +18,9 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 1.6rem;
   cursor: pointer;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Make images easier to work with */
@@ -31,6 +34,9 @@ picture {
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
 }
 
 /* Remove default margin */
