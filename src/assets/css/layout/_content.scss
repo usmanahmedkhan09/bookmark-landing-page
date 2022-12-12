@@ -77,7 +77,6 @@
       }
 
       &--description {
-        font-size: 1.4rem;
         color: var(--color-secondary-grayblue);
       }
     }
@@ -112,7 +111,7 @@
         .image__wrapper {
           background-color: var(--color-primary-blue);
           height: 350px;
-          max-width: 75%;
+          max-width: 600px;
           border-bottom-right-radius: 160px;
 
           .bookmark {
@@ -147,7 +146,6 @@
 
         &--description {
           color: var(--color-secondary-grayblue);
-          font-size: 1.4rem;
           margin: 24px 0px;
         }
 
