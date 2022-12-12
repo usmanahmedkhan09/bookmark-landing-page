@@ -16,6 +16,7 @@
     &--image {
       flex: 1 1 50%;
     }
+
     &--title {
       font-size: 4.2rem;
       font-weight: 500;
@@ -36,6 +37,7 @@
     &--buttons {
       display: flex;
       gap: 16px;
+      margin-top: 32px;
 
       .btn {
         min-width: unset;
@@ -60,6 +62,86 @@
         position: absolute;
         top: -30%;
         right: 8%;
+      }
+    }
+  }
+
+  &__features {
+    min-height: 40rem;
+    .content__header {
+      text-align: center;
+      &--title {
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+
+      &--description {
+        font-size: 1.4rem;
+        color: var(--color-secondary-grayblue);
+      }
+    }
+
+    &--tabs {
+      justify-content: center;
+      margin-top: 24px;
+      li {
+        padding: 24px 32px;
+        color: var(--color-secondary-grayblue);
+        border-bottom: 1px solid var(--color-secondary-grayblue);
+        font-weight: 500;
+
+        &:hover {
+          color: var(--color-primary-red);
+        }
+
+        &.active {
+          border-bottom: 3px solid var(--color-primary-red);
+          color: var(--color-secondary-darkblue);
+        }
+      }
+    }
+
+    &--bookmarkTab {
+      display: flex;
+      justify-content: space-between;
+      padding: 15rem 0px;
+
+      .bookmarkTab__image {
+        flex: 1 1 60%;
+        .image__wrapper {
+          background-color: var(--color-primary-blue);
+          height: 350px;
+          max-width: 75%;
+          border-bottom-right-radius: 160px;
+
+          .image {
+            position: absolute;
+            top: -20%;
+            left: 28%;
+            max-width: 600px;
+          }
+        }
+      }
+
+      .bookmarkTab__details {
+        flex: 1 1 40%;
+
+        &--title {
+          font-size: 3.2rem;
+          font-weight: 500;
+        }
+
+        &--description {
+          color: var(--color-secondary-grayblue);
+          font-size: 1.4rem;
+          margin: 24px 0px;
+        }
+
+        .btn {
+          background-color: var(--color-primary-blue);
+          color: white;
+        }
       }
     }
   }
