@@ -30,9 +30,14 @@
           so you can access them on the go
         </p>
         <ul class="content__features--tabs">
-          <li class="active">Simple Bookmarking</li>
-          <li>Speedy Searching</li>
-          <li>Easy Sharing</li>
+          <li
+            @click="activeTab = tab.value"
+            :class="tab.value == activeTab ? 'active' : ''"
+            v-for="(tab, index) in tabs"
+            :key="index"
+          >
+            {{ tab.name }}
+          </li>
         </ul>
       </div>
       <component :is="activeTab"></component>
@@ -43,15 +48,23 @@
 import { defineComponent, ref } from "vue";
 import HeroIcon from "../icons/heroIcon.vue";
 import BookMark from "./reusable/bookmark.vue";
-
+import Searching from "./reusable/searching.vue";
+import Sharing from "./reusable/sharing.vue";
 export default defineComponent({
   components: {
     HeroIcon,
     BookMark,
+    Searching,
+    Sharing,
   },
   setup() {
-    const activeTab = ref(BookMark);
-    return { activeTab };
+    const tabs = ref([
+      { name: "Simple Bookmarking", value: "BookMark" },
+      { name: "Speedy Searching", value: "Searching" },
+      { name: "Easy Sharing", value: "Sharing" },
+    ]);
+    const activeTab = ref("BookMark");
+    return { activeTab, tabs };
   },
 });
 </script>
