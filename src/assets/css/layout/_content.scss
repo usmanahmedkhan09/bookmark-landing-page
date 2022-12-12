@@ -2,6 +2,10 @@
   &__intro {
     margin: 64px 0px;
     padding-left: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     &--title {
       font-size: 4.2rem;
       font-weight: 500;
@@ -33,6 +37,13 @@
           color: white;
         }
       }
+    }
+
+    &--design {
+      height: 300px;
+      width: 400px;
+      background-color: var(--color-primary-blue);
+      border-bottom-left-radius: 160px;
     }
   }
 }
