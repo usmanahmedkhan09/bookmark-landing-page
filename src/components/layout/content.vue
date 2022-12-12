@@ -16,8 +16,9 @@
         </div>
       </div>
       <div class="content__intro--image">
-        <!-- <HeroIcon /> -->
-        <div class="content__intro--design"></div>
+        <div class="content__intro--design">
+          <HeroIcon class="content__intro--design--svg" />
+        </div>
       </div>
     </section>
   </main>
