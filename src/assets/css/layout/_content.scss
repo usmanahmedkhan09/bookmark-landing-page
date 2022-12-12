@@ -1,0 +1,38 @@
+.content {
+  &__intro {
+    margin: 64px 0px;
+    padding-left: 64px;
+    &--title {
+      font-size: 4.2rem;
+      font-weight: 500;
+      margin: unset;
+      span {
+        display: block;
+        font-size: inherit;
+        font-weight: inherit;
+        margin-top: -20px;
+      }
+    }
+    &--description {
+      font-size: 1.6rem;
+      color: var(--color-secondary-grayblue);
+      margin: 24px 0px;
+    }
+
+    &--buttons {
+      display: flex;
+      gap: 16px;
+
+      .btn {
+        min-width: unset;
+        width: 180px;
+        font-weight: normal;
+
+        &:first-child {
+          background-color: var(--color-primary-blue);
+          color: white;
+        }
+      }
+    }
+  }
+}
