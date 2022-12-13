@@ -42,6 +42,23 @@
       </div>
       <component :is="activeTab"></component>
     </section>
+    <section class="content__extensions">
+      <div class="content__extensions--header">
+        <p class="content__extensions--header--title">Download the extension</p>
+        <p class="content__extensions--header--description">
+          We've got more brwoser in the pipeline.Please do let us know if <br />
+          you've got a favourite you'd like us to prioritize. <br />
+        </p>
+      </div>
+      <div class="cards__container">
+        <extensionCard
+          v-for="(extension, index) in extensioncrads"
+          :extension="extension"
+          :key="index"
+        >
+        </extensionCard>
+      </div>
+    </section>
   </main>
 </template>
 <script lang="ts">
@@ -50,12 +67,14 @@ import HeroIcon from "../icons/heroIcon.vue";
 import BookMark from "./reusable/bookmark.vue";
 import Searching from "./reusable/searching.vue";
 import Sharing from "./reusable/sharing.vue";
+import extensionCard from "./reusable/extension-card.vue";
 export default defineComponent({
   components: {
     HeroIcon,
     BookMark,
     Searching,
     Sharing,
+    extensionCard,
   },
   setup() {
     const tabs = ref([
@@ -64,7 +83,14 @@ export default defineComponent({
       { name: "Easy Sharing", value: "Sharing" },
     ]);
     const activeTab = ref("BookMark");
-    return { activeTab, tabs };
+
+    const extensioncrads = ref([
+      { name: "Chrome", version: "62" },
+      { name: "FireFox", version: "55" },
+      { name: "Opera", version: "46" },
+    ]);
+
+    return { activeTab, tabs, extensioncrads };
   },
 });
 </script>

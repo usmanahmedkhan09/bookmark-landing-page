@@ -28,6 +28,7 @@
         margin-top: -20px;
       }
     }
+
     &--description {
       font-size: 1.6rem;
       color: var(--color-secondary-grayblue);
@@ -122,16 +123,12 @@
           }
 
           .searching {
-            position: absolute;
-            top: -20%;
+            @extend .bookmark;
             left: 47%;
-            max-width: 600px;
           }
           .sharing {
-            position: absolute;
-            top: -20%;
+            @extend .bookmark;
             left: 47%;
-            max-width: 600px;
           }
         }
       }
@@ -152,6 +149,84 @@
         .btn {
           background-color: var(--color-primary-blue);
           color: white;
+        }
+      }
+    }
+  }
+
+  &__extensions {
+    &--header {
+      text-align: center;
+      &--title {
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+
+      &--description {
+        color: var(--color-secondary-grayblue);
+      }
+    }
+
+    .cards__container {
+      display: flex;
+      gap: 32px;
+      padding: 64px 0px;
+      justify-content: center;
+
+      .extension__card {
+        max-width: 220px;
+        min-height: 300px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+
+        &.firefox {
+          top: 30px;
+        }
+        &.opera {
+          top: 60px;
+        }
+        &--header {
+          height: 100px;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &--body {
+          text-align: center;
+          margin: 24px 0px;
+          &--title {
+            font-weight: 500;
+          }
+
+          &--subtitle {
+            font-size: 1.4rem;
+            color: var(--color-secondary-grayblue);
+            margin-bottom: 16px;
+          }
+        }
+
+        &--footer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .btn {
+            background-color: var(--color-primary-blue);
+            color: white;
+            font-size: 1.4rem;
+          }
         }
       }
     }
