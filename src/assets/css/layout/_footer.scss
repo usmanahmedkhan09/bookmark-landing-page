@@ -1,0 +1,42 @@
+.footer {
+  min-height: 80px;
+  width: 100%;
+  background-color: var(--color-secondary-darkblue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 72px;
+
+  &__list {
+    li {
+      color: white;
+      margin: 0px 16px;
+      &:not(:first-child) {
+        align-self: baseline;
+        &:hover {
+          color: var(--color-primary-red);
+        }
+      }
+
+      svg path {
+        fill: white;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 24px;
+
+    svg {
+      height: 25px;
+      width: 25px;
+
+      &:hover {
+        path {
+          fill: var(--color-primary-red);
+        }
+      }
+    }
+  }
+}

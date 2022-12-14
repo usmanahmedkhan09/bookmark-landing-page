@@ -297,6 +297,10 @@
         outline: none;
         min-width: 250px;
         padding: 0px 16px;
+
+        &::placeholder {
+          color: var(--color-secondary-grayblue);
+        }
       }
       .btn {
         min-width: 150px;
