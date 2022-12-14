@@ -80,6 +80,9 @@
         <button class="btn">More Info</button>
       </div>
     </section>
+    <section class="content__support">
+      <supportVue />
+    </section>
   </main>
 </template>
 <script lang="ts">
@@ -90,6 +93,7 @@ import Searching from "./reusable/searching.vue";
 import Sharing from "./reusable/sharing.vue";
 import extensionCard from "./reusable/extension-card.vue";
 import accordianVue from "../accordian.vue";
+import supportVue from "./reusable/support.vue";
 export default defineComponent({
   components: {
     HeroIcon,
@@ -98,6 +102,7 @@ export default defineComponent({
     Sharing,
     extensionCard,
     accordianVue,
+    supportVue,
   },
   setup() {
     const tabs = ref([
