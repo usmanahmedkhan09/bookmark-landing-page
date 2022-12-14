@@ -155,6 +155,7 @@
   }
 
   &__extensions {
+    margin: 64px 0px;
     &--header {
       text-align: center;
       &--title {
@@ -229,6 +230,27 @@
           }
         }
       }
+    }
+  }
+
+  &__questions {
+    margin: 150px 0px;
+
+    &--header {
+      text-align: center;
+      &--title {
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+
+      &--description {
+        color: var(--color-secondary-grayblue);
+      }
+    }
+
+    &--accordian {
+      padding: 64px 0px;
     }
   }
 }

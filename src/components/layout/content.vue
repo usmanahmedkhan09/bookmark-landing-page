@@ -59,6 +59,24 @@
         </extensionCard>
       </div>
     </section>
+    <section class="content__questions">
+      <div class="content__questions--header">
+        <p class="content__questions--header--title">
+          Frequently Asked Questions
+        </p>
+        <p class="content__questions--header--description">
+          Here are some of our FAQ's.if you have any other questions <br />
+          you'd like answered please feel free to email us. <br />
+        </p>
+      </div>
+      <div class="content__questions--accordian">
+        <accordianVue
+          :question="question"
+          v-for="(question, index) in questions"
+          :key="index"
+        />
+      </div>
+    </section>
   </main>
 </template>
 <script lang="ts">
@@ -68,6 +86,7 @@ import BookMark from "./reusable/bookmark.vue";
 import Searching from "./reusable/searching.vue";
 import Sharing from "./reusable/sharing.vue";
 import extensionCard from "./reusable/extension-card.vue";
+import accordianVue from "../accordian.vue";
 export default defineComponent({
   components: {
     HeroIcon,
@@ -75,6 +94,7 @@ export default defineComponent({
     Searching,
     Sharing,
     extensionCard,
+    accordianVue,
   },
   setup() {
     const tabs = ref([
@@ -90,7 +110,30 @@ export default defineComponent({
       { name: "Opera", version: "46" },
     ]);
 
-    return { activeTab, tabs, extensioncrads };
+    const questions = ref([
+      {
+        title: "What is BookMark?",
+        answer:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, impedit eaque Quia facere aut doloribus dolorem quasi laborum voluptatum, voluptate ex ipsa, a nam non obcaecati architecto sit totam temporibus?",
+      },
+      {
+        title: "How can I request a new browser?",
+        answer:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, impedit eaque Quia facere aut doloribus dolorem quasi laborum voluptatum, voluptate ex ipsa, a nam non obcaecati architecto sit totam temporibus?",
+      },
+      {
+        title: "Is there a mobile app?",
+        answer:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, impedit eaque Quia facere aut doloribus dolorem quasi laborum voluptatum, voluptate ex ipsa, a nam non obcaecati architecto sit totam temporibus?",
+      },
+      {
+        title: "What about other Chromium browser?",
+        answer:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. A, impedit eaque Quia facere aut doloribus dolorem quasi laborum voluptatum, voluptate ex ipsa, a nam non obcaecati architecto sit totam temporibus?",
+      },
+    ]);
+
+    return { activeTab, tabs, extensioncrads, questions };
   },
 });
 </script>
