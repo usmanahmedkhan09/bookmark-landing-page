@@ -76,6 +76,9 @@
           :key="index"
         />
       </div>
+      <div class="content__questions--button">
+        <button class="btn">More Info</button>
+      </div>
     </section>
   </main>
 </template>

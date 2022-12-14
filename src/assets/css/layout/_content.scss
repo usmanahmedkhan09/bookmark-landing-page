@@ -235,6 +235,7 @@
 
   &__questions {
     margin: 150px 0px;
+    padding: 64px 0px;
 
     &--header {
       text-align: center;
@@ -250,7 +251,15 @@
     }
 
     &--accordian {
-      padding: 64px 0px;
+      margin: 48px 0px;
+    }
+
+    &--button {
+      .btn {
+        background-color: var(--color-primary-blue);
+        color: white;
+        margin: auto;
+      }
     }
   }
 }
