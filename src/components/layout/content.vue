@@ -3,7 +3,8 @@
     <section class="content__intro">
       <div class="content__intro--details">
         <p class="content__intro--title">
-          A Simple Bookmark <span> Manager </span>
+          A Simple Bookmark <br />
+          Manager
         </p>
         <p class="content__intro--description">
           A clean and simple interface to organize your favourite <br />
@@ -20,7 +21,7 @@
         <div class="bg"></div>
       </div>
     </section>
-    <!-- <section class="content__features">
+    <section class="content__features">
       <div class="content__header">
         <p class="content__header--title">Features</p>
         <p class="content__header--description">
@@ -40,7 +41,7 @@
         </ul>
       </div>
       <component :is="activeTab"></component>
-    </section> -->
+    </section>
     <!-- <section class="content__extensions">
       <div class="content__extensions--header">
         <p class="content__extensions--header--title">Download the extension</p>

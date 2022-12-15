@@ -13,7 +13,7 @@
     }
 
     @include media("<=tablet") {
-      padding-left: 24px;
+      padding-left: unset;
     }
 
     &--details {
@@ -24,6 +24,10 @@
       @include media("<=1100px") {
         text-align: center;
         width: 100%;
+      }
+
+      @include media("<=tablet") {
+        padding: 16px;
       }
     }
 
@@ -72,6 +76,7 @@
       font-size: 4.2rem;
       font-weight: 500;
       margin: unset;
+      line-height: 1.2;
       span {
         display: block;
         font-size: inherit;
@@ -109,8 +114,14 @@
 
   &__features {
     min-height: 40rem;
+
+    // @include media("<=tablet") {
+    //   padding-right: 16px;
+    // }
+
     .content__header {
       text-align: center;
+
       &--title {
         font-size: 2.4rem;
         font-weight: 500;
@@ -125,19 +136,51 @@
     &--tabs {
       justify-content: center;
       margin-top: 24px;
+
+      @include media("<=tablet") {
+        flex-direction: column;
+        // padding: 16px;
+      }
+
       li {
         padding: 24px 32px;
         color: var(--color-secondary-grayblue);
         border-bottom: 1px solid var(--color-secondary-grayblue);
         font-weight: 500;
 
+        @include media("<=tablet") {
+          width: 100%;
+          position: relative;
+        }
+
         &:hover {
           color: var(--color-primary-red);
         }
 
         &.active {
-          border-bottom: 3px solid var(--color-primary-red);
           color: var(--color-secondary-darkblue);
+          border-bottom: 3px solid var(--color-primary-red);
+
+          @include media("<=tablet") {
+            border-bottom: 1px solid var(--color-secondary-grayblue);
+          }
+
+          &::after {
+            content: "";
+            height: 4px;
+            width: 200px;
+            position: absolute;
+            bottom: 0;
+            background-color: var(--color-primary-red);
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            display: none;
+
+            @include media("<=tablet") {
+              display: inline-block;
+            }
+          }
         }
       }
     }
@@ -149,25 +192,75 @@
 
       .bookmarkTab__image {
         flex: 1 1 60%;
-        .image__wrapper {
-          background-color: var(--color-primary-blue);
-          height: 350px;
-          max-width: 600px;
-          border-bottom-right-radius: 160px;
+        position: relative;
 
-          .bookmark {
-            position: absolute;
-            top: -20%;
-            left: 28%;
-            max-width: 600px;
+        @include media("<=tablet") {
+          width: 100%;
+          flex: unset;
+        }
+
+        .bg {
+          height: 40rem;
+          width: 500px;
+          background-color: var(--color-primary-blue);
+          top: 150px;
+          z-index: -1;
+          right: 0;
+          border-radius: 0px 150px 150px 0;
+          margin-right: auto;
+
+          @include media("<=tablet") {
+            width: 70%;
           }
 
+          @include media("<=500px") {
+            height: 280px;
+          }
+        }
+
+        img {
+          position: absolute;
+          top: -20%;
+          left: 20%;
+
+          @include media("<=tablet") {
+            left: 2%;
+          }
+
+          @include media("<=500px") {
+            left: 3%;
+          }
+        }
+
+        .image__wrapper {
+          // background-color: var(--color-primary-blue);
+          // height: 350px;
+          // max-width: 600px;
+          // border-bottom-right-radius: 160px;
+          position: relative;
+
+          // @include media("<=500px") {
+          //   max-width: 300px;
+          //   left: 3%;
+          // }
+
+          // .bookmark {
+          //   position: absolute;
+          //   top: -20%;
+          //   left: 28%;
+
+          //   @include media("<=tablet") {
+          //     max-width: 100%;
+          //     left: 10%;
+          //   }
+          // }
+
           .searching {
-            @extend .bookmark;
+            // @extend .bookmark;
             left: 47%;
           }
           .sharing {
-            @extend .bookmark;
+            // @extend .bookmark;
             left: 47%;
           }
         }
