@@ -1,6 +1,6 @@
 <template>
-  <header class="header">
-    <div class="logo">
+  <header class="header" :class="isOpen ? 'close' : ''">
+    <div class="header__logo">
       <LogoIcon />
     </div>
     <nav>
@@ -13,16 +13,21 @@
         </li>
       </ul>
     </nav>
+    <iconMenuVue @click="isOpen = !isOpen" class="header__menu" />
   </header>
+  <sidebarVue @change="isOpen = false" :class="isOpen ? 'open' : ''" />
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import LogoIcon from "../icons/logoIcon.vue";
+import iconMenuVue from "../icons/icon-menu.vue";
+import sidebarVue from "./sidebar.vue";
 
 export default defineComponent({
-  components: { LogoIcon },
+  components: { LogoIcon, iconMenuVue, sidebarVue },
   setup() {
-    return {};
+    const isOpen = ref(false);
+    return { isOpen };
   },
 });
 </script>

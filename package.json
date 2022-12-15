@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "i": "^0.3.7",
+    "include-media": "^1.4.10",
     "sass": "^1.56.2",
+    "sass-mq": "^6.0.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {
