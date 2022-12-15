@@ -1,3 +1,4 @@
+@use "../Base/" as *;
 .content {
   &__intro {
     margin: 64px 0px;
@@ -7,14 +8,64 @@
     align-items: center;
     min-height: 60rem;
 
+    @include media("<=1100px") {
+      flex-direction: column-reverse;
+    }
+
+    @include media("<=tablet") {
+      padding-left: 24px;
+    }
+
     &--details {
       flex: 1 1 50%;
       align-self: baseline;
-      margin-top: 4rem;
+      margin-top: 7rem;
+
+      @include media("<=1100px") {
+        text-align: center;
+        width: 100%;
+      }
     }
 
     &--image {
+      position: relative;
       flex: 1 1 50%;
+      @include media("<=1100px") {
+        width: 100%;
+      }
+
+      img {
+        position: absolute;
+        top: -20%;
+        right: 20%;
+
+        @include media("<=tablet") {
+          right: unset;
+        }
+      }
+
+      .bg {
+        height: 40rem;
+        width: 500px;
+        background-color: var(--color-primary-blue);
+        top: 150px;
+        z-index: -1;
+        right: 0;
+        border-radius: 150px 0 0 150px;
+        margin-left: auto;
+
+        @include media("<=1300px") {
+          height: 35rem;
+        }
+
+        @include media("<=tablet") {
+          width: 80%;
+        }
+
+        @include media("<=500px") {
+          height: 250px;
+        }
+      }
     }
 
     &--title {
@@ -39,6 +90,9 @@
       display: flex;
       gap: 16px;
       margin-top: 32px;
+      @include media("<=1100px") {
+        justify-content: center;
+      }
 
       .btn {
         min-width: unset;
@@ -49,20 +103,6 @@
           background-color: var(--color-primary-blue);
           color: white;
         }
-      }
-    }
-
-    &--design {
-      height: 380px;
-      width: 500px;
-      margin-left: auto;
-      background-color: var(--color-primary-blue);
-      border-bottom-left-radius: 160px;
-
-      &--svg {
-        position: absolute;
-        top: -30%;
-        right: 8%;
       }
     }
   }

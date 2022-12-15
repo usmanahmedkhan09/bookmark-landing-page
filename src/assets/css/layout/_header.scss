@@ -55,7 +55,7 @@
   }
 
   &__sidebar {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     top: 0;
@@ -63,6 +63,7 @@
     flex-direction: column;
     padding: 16px;
     display: none;
+    z-index: 1;
 
     &.open {
       display: flex;
