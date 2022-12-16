@@ -1,7 +1,7 @@
 <template>
   <div class="extension__card" :class="extension.name.toLowerCase()">
     <div class="extension__card--header">
-      <img :src="getImageUrl(extension.name)" />
+      <img :src="getImageUrl(extension.name)" alt="dummy" />
     </div>
     <div class="extension__card--body">
       <p class="extension__card--body--title">Add to {{ extension.name }}</p>
