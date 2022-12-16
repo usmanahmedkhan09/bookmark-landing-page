@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="content__intro--image">
-        <img src="../../assets/images/illustration-hero.svg" alt="" />
+        <img src="../../assets/images/illustration-hero.svg" alt="hero image" />
         <div class="bg"></div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 <template>
   <div class="extension__card" :class="extension.name.toLowerCase()">
     <div class="extension__card--header">
-      <img :src="getImageUrl(extension.name)" alt="" />
+      <img :src="getImageUrl(extension.name)" />
     </div>
     <div class="extension__card--body">
       <p class="extension__card--body--title">Add to {{ extension.name }}</p>
@@ -9,7 +9,7 @@
         Minimum version {{ extension.version }}
       </p>
       <div class="extension__card--seperator">
-        <img src="../../../assets/images/bg-dots.svg" alt="" />
+        <img src="../../../assets/images/bg-dots.svg" alt="bg__dots" />
       </div>
     </div>
     <div class="extension__card--footer">

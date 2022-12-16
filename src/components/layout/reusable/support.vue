@@ -17,7 +17,7 @@
         v-if="error.state"
         class=""
         src="../../../assets/images/icon-error.svg"
-        alt=""
+        alt="error"
       />
     </div>
     <button class="btn" @click="validateEmail()">Contact Us</button>

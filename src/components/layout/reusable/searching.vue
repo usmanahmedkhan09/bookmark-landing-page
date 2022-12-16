@@ -4,7 +4,7 @@
       <img
         class="searching"
         src="../../../assets/images/illustration-features-tab-2.svg"
-        alt=""
+        alt="searching"
       />
       <div class="bg"></div>
     </div>

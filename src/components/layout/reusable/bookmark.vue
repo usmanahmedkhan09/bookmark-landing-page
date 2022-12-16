@@ -4,7 +4,7 @@
       <img
         class="bookmark"
         src="../../../assets/images/illustration-features-tab-1.svg"
-        alt=""
+        alt="tab__1"
       />
       <div class="bg"></div>
     </div>

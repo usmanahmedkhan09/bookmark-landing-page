@@ -4,7 +4,7 @@
       <img
         class="sharing"
         src="../../../assets/images/illustration-features-tab-3.svg"
-        alt=""
+        alt="sharing"
       />
       <div class="bg"></div>
     </div>

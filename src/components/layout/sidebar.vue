@@ -1,7 +1,7 @@
 <template>
   <div class="header__sidebar">
     <div class="header__sidebar--menu">
-      <img src="../../assets/images/logo-bookmark.svg" alt="" />
+      <img src="../../assets/images/logo-bookmark.svg" alt="bookmark__logo" />
       <iconCrossVue @click="$emit('change')" class="" />
     </div>
     <ul class="header__sidebar--list">
