@@ -80,9 +80,9 @@
         <button class="btn">More Info</button>
       </div>
     </section>
-    <!-- <section class="content__support">
+    <section class="content__support">
       <supportVue />
-    </section> -->
+    </section>
   </main>
 </template>
 <script lang="ts">
