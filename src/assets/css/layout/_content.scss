@@ -328,6 +328,7 @@
       }
 
       .extension__card {
+        position: relative;
         max-width: 220px;
         min-height: 300px;
         border-radius: 10px;
@@ -481,6 +482,10 @@
           font-size: 1.4rem;
           font-weight: 500;
           color: white;
+
+          @include media("<=tablet") {
+            display: block;
+          }
         }
 
         img {
