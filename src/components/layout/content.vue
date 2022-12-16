@@ -1,6 +1,6 @@
 <template>
   <main class="content">
-    <section class="content__intro">
+    <div class="content__intro">
       <div class="content__intro--details">
         <p class="content__intro--title">
           A Simple Bookmark <br />
@@ -20,8 +20,8 @@
         <img src="../../assets/images/illustration-hero.svg" alt="hero image" />
         <div class="bg"></div>
       </div>
-    </section>
-    <section class="content__features">
+    </div>
+    <div class="content__features">
       <div class="content__header">
         <p class="content__header--title">Features</p>
         <p class="content__header--description">
@@ -41,8 +41,8 @@
         </ul>
       </div>
       <component :is="activeTab"></component>
-    </section>
-    <section class="content__extensions">
+    </div>
+    <div class="content__extensions">
       <div class="content__extensions--header">
         <p class="content__extensions--header--title">Download the extension</p>
         <p class="content__extensions--header--description">
@@ -58,8 +58,8 @@
         >
         </extensionCard>
       </div>
-    </section>
-    <section class="content__questions">
+    </div>
+    <div class="content__questions">
       <div class="content__questions--header">
         <p class="content__questions--header--title">
           Frequently Asked Questions
@@ -79,10 +79,10 @@
       <div class="content__questions--button">
         <button class="btn">More Info</button>
       </div>
-    </section>
-    <section class="content__support">
+    </div>
+    <div class="content__support">
       <supportVue />
-    </section>
+    </div>
   </main>
 </template>
 <script lang="ts">
