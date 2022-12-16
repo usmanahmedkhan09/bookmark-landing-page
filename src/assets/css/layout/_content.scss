@@ -451,19 +451,42 @@
         flex-direction: column;
       }
 
-      input {
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        min-width: 250px;
-        padding: 0px 16px;
+      .input__wrapper {
+        position: relative;
 
-        &::placeholder {
-          color: var(--color-secondary-grayblue);
+        &.error {
+          border: 2px solid var(--color-primary-red);
+          border-radius: 5px;
+          background-color: var(--color-primary-red);
         }
 
-        @include media("<=tablet") {
-          min-height: 50px;
+        input {
+          border-radius: 5px;
+          border: none;
+          outline: none;
+          min-width: 250px;
+          padding: 0px 16px;
+          min-height: 45px;
+
+          &::placeholder {
+            color: var(--color-secondary-grayblue);
+          }
+
+          @include media("<=tablet") {
+            min-height: 50px;
+          }
+        }
+
+        span {
+          font-size: 1.4rem;
+          font-weight: 500;
+          color: white;
+        }
+
+        img {
+          position: absolute;
+          right: 5px;
+          top: 14px;
         }
       }
 
