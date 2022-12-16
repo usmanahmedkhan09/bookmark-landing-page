@@ -8,7 +8,7 @@
       />
       <div class="bg"></div>
     </div>
-    <!-- <div class="bookmarkTab__details">
+    <div class="bookmarkTab__details">
       <h2 class="bookmarkTab__details--title">Bookmark in one click</h2>
       <p class="bookmarkTab__details--description">
         Organize your bookmarks however you like.Our <br />simple drag-n-drop
@@ -16,7 +16,7 @@
         control over how you manage your favourite sites.
       </p>
       <button class="btn">More Info</button>
-    </div> -->
+    </div>
   </div>
 </template>
 <script lang="ts">

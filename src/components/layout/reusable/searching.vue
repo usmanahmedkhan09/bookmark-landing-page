@@ -1,13 +1,12 @@
 <template>
   <div class="content__features--bookmarkTab">
     <div class="bookmarkTab__image">
-      <div class="image__wrapper">
-        <img
-          class="searching"
-          src="../../../assets/images/illustration-features-tab-2.svg"
-          alt=""
-        />
-      </div>
+      <img
+        class="searching"
+        src="../../../assets/images/illustration-features-tab-2.svg"
+        alt=""
+      />
+      <div class="bg"></div>
     </div>
     <div class="bookmarkTab__details">
       <h2 class="bookmarkTab__details--title">Intelligent search</h2>
