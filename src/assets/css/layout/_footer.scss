@@ -1,3 +1,4 @@
+@use "../Base/" as *;
 .footer {
   min-height: 80px;
   width: 100%;
@@ -7,10 +8,24 @@
   justify-content: space-between;
   padding: 0px 72px;
 
+  @include media("<=tablet") {
+    flex-direction: column;
+    min-height: 300px;
+    justify-content: space-evenly;
+  }
+
   &__list {
+    @include media("<=tablet") {
+      flex-direction: column;
+      text-align: center;
+    }
     li {
       color: white;
       margin: 0px 16px;
+
+      @include media("<=tablet") {
+        margin: 16px auto;
+      }
       &:not(:first-child) {
         align-self: baseline;
         &:hover {
