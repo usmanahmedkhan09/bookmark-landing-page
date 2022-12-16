@@ -4,7 +4,7 @@
       <LogoIcon />
     </div>
     <nav>
-      <ul>
+      <ul role="list">
         <li>Features</li>
         <li>Pricing</li>
         <li>Contact</li>
