@@ -42,7 +42,7 @@
       </div>
       <component :is="activeTab"></component>
     </section>
-    <!-- <section class="content__extensions">
+    <section class="content__extensions">
       <div class="content__extensions--header">
         <p class="content__extensions--header--title">Download the extension</p>
         <p class="content__extensions--header--description">
@@ -58,8 +58,8 @@
         >
         </extensionCard>
       </div>
-    </section> -->
-    <!-- <section class="content__questions">
+    </section>
+    <section class="content__questions">
       <div class="content__questions--header">
         <p class="content__questions--header--title">
           Frequently Asked Questions
@@ -79,7 +79,7 @@
       <div class="content__questions--button">
         <button class="btn">More Info</button>
       </div>
-    </section> -->
+    </section>
     <!-- <section class="content__support">
       <supportVue />
     </section> -->

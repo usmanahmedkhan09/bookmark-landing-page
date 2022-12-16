@@ -1,3 +1,4 @@
+@use "../Base/" as *;
 .accordion {
   background-color: white;
   padding: 15px;
@@ -7,6 +8,11 @@
   max-width: 50%;
   margin: auto;
   border-bottom: 1px solid #eee;
+
+  @include media("<=tablet") {
+    max-width: unset;
+    margin: unset;
+  }
 
   &:first-child {
     border-top: 1px solid #eee;
